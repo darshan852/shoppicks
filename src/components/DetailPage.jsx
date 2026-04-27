@@ -7,9 +7,9 @@ export default function DetailPage({ product, products, setPage, setSelectedProd
     <div className="page">
       <div className="detail-page">
         <div className="breadcrumb">
-          <a onClick={() => setPage("home")}>Home</a>
+          <button onClick={() => setPage("home")}>Home</button>
           <span className="breadcrumb-sep">›</span>
-          <a onClick={() => setPage("category")}>{product.category}</a>
+          <button onClick={() => setPage("category")}>{product.category}</button>
           <span className="breadcrumb-sep">›</span>
           <span style={{ color: "var(--ink)" }}>{product.name}</span>
         </div>
@@ -24,7 +24,7 @@ export default function DetailPage({ product, products, setPage, setSelectedProd
             </div>
             <div className="gallery-thumbs">
               {[0, 1, 2, 3].map(i => (
-                <div key={i} className={`thumbRs{i === 0 ? " active" : ""}`}>
+                <div key={i} className={`thumb${i === 0 ? " active" : ""}`}>
                   <img src={product.img} alt="" style={{ filter: i > 0 ? "brightness(0.85)" : "none" }} />
                 </div>
               ))}
@@ -68,9 +68,9 @@ export default function DetailPage({ product, products, setPage, setSelectedProd
               </div>
             </div>
 
-            <button className="buy-btn" onClick={() => { window.open("#", "_blank"); showToast("Opening Amazon…"); }}>
+            {/* <button className="buy-btn" onClick={() => { window.open("#", "_blank"); showToast("Opening Amazon…"); }}>
               🛒 Buy on Amazon · Rs{product.price}
-            </button>
+            </button> */}
             <div style={{ textAlign: "center", fontSize: 12, color: "var(--gray-4)", marginTop: 8 }}>
               ✓ Prime eligible · ✓ Free returns · ✓ Secure checkout
             </div>
@@ -86,9 +86,9 @@ export default function DetailPage({ product, products, setPage, setSelectedProd
           </div>
         )}
       </div>
-      <button className="sticky-buy" onClick={() => { window.open("#", "_blank"); showToast("Opening Amazon…"); }}>
+      {/* <button className="sticky-buy" onClick={() => { window.open("#", "_blank"); showToast("Opening Amazon…"); }}>
         🛒 Buy on Amazon — Rs{product.price}
-      </button>
+      </button> */}
     </div>
   );
 }

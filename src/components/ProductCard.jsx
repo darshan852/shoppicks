@@ -19,7 +19,7 @@ function ProductCard({ product, onClick, wishlist, toggleWishlist }) {
         <img src={product.img} alt={product.name} />
         <div className="card-badges">
           <span
-            className={`badge Rs{badgeClass[product.badge] || "badge-trending"}`}
+            className={`badge ${badgeClass[product.badge] || "badge-trending"}`}
           >
             {badgeLabel[product.badge] || "🔥 Trending"}
           </span>
@@ -28,7 +28,7 @@ function ProductCard({ product, onClick, wishlist, toggleWishlist }) {
           )}
         </div>
         <button
-          className={`wishlist-btnRs{wishlist.includes(product.id) ? " active" : ""}`}
+          className={`wishlist-btn${wishlist.includes(product.id) ? " active" : ""}`}
           onClick={(e) => {
             e.stopPropagation();
             toggleWishlist(product.id);
