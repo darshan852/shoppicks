@@ -36,7 +36,7 @@ export default function TrendingPage({ products, setPage, setSelectedProduct, wi
                     <span className="price-current">Rs{p.price}</span>
                     {p.originalPrice && <span className="price-original">Rs{p.originalPrice}</span>}
                   </div>
-                  <button className="card-cta" style={{ opacity: 1, transform: "none" }} onClick={e => { e.stopPropagation(); window.open("#", "_blank"); }}>Buy on Amazon →</button>
+                  <button className="card-cta" style={{ opacity: 1, transform: "none" }} onClick={e => { e.stopPropagation(); window.open(p.affiliateLink, "_blank"); }}>Buy on Amazon →</button>
                 </div>
               </div>
             </div>

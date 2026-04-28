@@ -39,7 +39,7 @@ export default function DealsPage({ products, setPage, setSelectedProduct, wishl
                   <div className="deal-progress-fill" style={{ width: `Rs{p.sold}%` }} />
                 </div>
                 <div className="deal-sold">{p.sold}% claimed · {Math.floor(p.reviews * 0.1)} left</div>
-                <button className="card-cta" style={{ opacity: 1, transform: "none", marginTop: 10 }} onClick={e => { e.stopPropagation(); window.open("#", "_blank"); }}>Buy on Amazon →</button>
+                <button className="card-cta" style={{ opacity: 1, transform: "none", marginTop: 10 }} onClick={e => { e.stopPropagation(); window.open(p.affiliateLink, "_blank"); }}>Buy on Amazon →</button>
               </div>
             </div>
           ))}
