@@ -13,6 +13,7 @@ import AdminPage from "./components/AdminPage";
 import Footer from "./components/Footer";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase";
+import ReactGA from "react-ga4"
 
 // const INITIAL_PRODUCTS = [
 //   { id: 1, name: "Vintage Leather Tote Bag", category: "Fashion", price: 89, originalPrice: 149, rating: 4.8, reviews: 1240, badge: "trending", img: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=400&fit=crop", description: "Handcrafted genuine leather tote with gold hardware. Perfect for work and weekends.", affiliateLink: "#", sold: 78, discount: 40, pros: ["Genuine leather", "Multiple pockets", "Lifetime warranty"], cons: ["Heavy when full", "Needs conditioning"], tags: ["#Trending", "#BestSeller"] },
@@ -76,6 +77,9 @@ function App() {
     showToast,
   };
 
+  useEffect(()=>{
+          ReactGA.initialize("G-DTJRM8JGXT")
+  },[])
   return (
     <>
       <div
