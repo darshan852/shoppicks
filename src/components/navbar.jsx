@@ -8,7 +8,7 @@ function Navbar({ page, setPage, wishlistCount }) {
     { id: "trending", label: "Trending" },
     { id: "category", label: "Categories" },
     { id: "blog", label: "Ideas" },
-    // { id: "admin", label: "⚙ Admin" },
+    { id: "admin", label: "⚙ Admin" },
   ];
   return (
     <nav className="navbar">

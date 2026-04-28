@@ -62,7 +62,7 @@ function ProductCard({ product, onClick, wishlist, toggleWishlist }) {
           className="card-cta"
           onClick={(e) => {
             e.stopPropagation();
-            window.open("#", "_blank");
+            window.open(product.affiliateLink, "_blank");
           }}
         >
           Buy on Amazon →

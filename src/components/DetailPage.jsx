@@ -68,9 +68,9 @@ export default function DetailPage({ product, products, setPage, setSelectedProd
               </div>
             </div>
 
-            {/* <button className="buy-btn" onClick={() => { window.open("#", "_blank"); showToast("Opening Amazon…"); }}>
+            <button className="buy-btn" onClick={() => { window.open(product.affiliateLink, "_blank"); showToast("Opening Amazon…"); }}>
               🛒 Buy on Amazon · Rs{product.price}
-            </button> */}
+            </button>
             <div style={{ textAlign: "center", fontSize: 12, color: "var(--gray-4)", marginTop: 8 }}>
               ✓ Prime eligible · ✓ Free returns · ✓ Secure checkout
             </div>
@@ -86,9 +86,9 @@ export default function DetailPage({ product, products, setPage, setSelectedProd
           </div>
         )}
       </div>
-      {/* <button className="sticky-buy" onClick={() => { window.open("#", "_blank"); showToast("Opening Amazon…"); }}>
+      <button className="sticky-buy" onClick={() => { window.open(product.affiliateLink, "_blank"); showToast("Opening Amazon…"); }}>
         🛒 Buy on Amazon — Rs{product.price}
-      </button> */}
+      </button>
     </div>
   );
 }
